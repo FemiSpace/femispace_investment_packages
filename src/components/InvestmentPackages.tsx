@@ -3,7 +3,28 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const packages = [
+type Benefits = {
+  'Platform Access Duration': string;
+  'Post-Period Discount': string;
+  'Family Members Covered': string;
+  'Health Assessments': string;
+  'Men\'s Health Access (Q4 2025)': string;
+  'Children\'s Module (2026)': string;
+  'Health Protocol': string;
+  'Investment Updates': string;
+  'Future Round Priority': string;
+  'Advisory Role': string;
+  'Feature Access': string;
+  'Support Level': string;
+}
+
+type Package = {
+  name: string;
+  amount: number;
+  benefits: Benefits;
+}
+
+const packages: Package[] = [
   {
     name: 'Early Adopter',
     amount: 10000,
@@ -325,7 +346,7 @@ export function InvestmentPackages() {
                     <td className="p-4 font-semibold text-primary">{benefit}</td>
                     {packages.map(pkg => (
                       <td key={pkg.name} className="p-4 text-center text-gray-700">
-                        {pkg.benefits[benefit]}
+                        {pkg.benefits[benefit as keyof typeof pkg.benefits]}
                       </td>
                     ))}
                   </tr>
@@ -339,7 +360,7 @@ export function InvestmentPackages() {
   )
 }
 
-function BenefitItem({ pkg, keys }: { pkg: any, keys: string[] }) {
+function BenefitItem({ pkg, keys }: { pkg: Package, keys: (keyof Benefits)[] }) {
   return (
     <>
       {keys.map(key => (
