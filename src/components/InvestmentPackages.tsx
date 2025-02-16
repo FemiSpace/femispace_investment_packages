@@ -3,6 +3,27 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
+type Benefits = {
+  'Platform Access Duration': string;
+  'Post-Period Discount': string;
+  'Family Members Covered': string;
+  'Health Assessments': string;
+  'Men\'s Health Access (Q4 2025)': string;
+  'Children\'s Module (2026)': string;
+  'Health Protocol': string;
+  'Investment Updates': string;
+  'Future Round Priority': string;
+  'Advisory Role': string;
+  'Feature Access': string;
+  'Support Level': string;
+}
+
+type Package = {
+  name: string;
+  amount: number;
+  benefits: Benefits;
+}
+
 const packages: Package[] = [
   {
     name: 'Early Adopter',
@@ -267,7 +288,7 @@ export function InvestmentPackages() {
                 <h4 className="text-lg font-semibold text-primary mb-4">Platform Access</h4>
                 <div className="space-y-3">
                   <BenefitItem 
-                    pkg={packages.find(p => p.name === expandedPackage)} 
+                    pkg={packages.find(p => p.name === expandedPackage) || packages[0]}
                     keys={['Platform Access Duration', 'Post-Period Discount', 'Family Members Covered']}
                   />
                 </div>
@@ -277,7 +298,7 @@ export function InvestmentPackages() {
                 <h4 className="text-lg font-semibold text-primary mb-4">Health Benefits</h4>
                 <div className="space-y-3">
                   <BenefitItem 
-                    pkg={packages.find(p => p.name === expandedPackage)} 
+                    pkg={packages.find(p => p.name === expandedPackage) || packages[0]}
                     keys={['Health Assessments', 'Men\'s Health Access (Q4 2025)', 'Children\'s Module (2026)', 'Health Protocol']}
                   />
                 </div>
@@ -287,7 +308,7 @@ export function InvestmentPackages() {
                 <h4 className="text-lg font-semibold text-primary mb-4">Investment Benefits</h4>
                 <div className="space-y-3">
                   <BenefitItem 
-                    pkg={packages.find(p => p.name === expandedPackage)} 
+                    pkg={packages.find(p => p.name === expandedPackage) || packages[0]}
                     keys={['Investment Updates', 'Future Round Priority', 'Advisory Role', 'Feature Access', 'Support Level']}
                   />
                 </div>
