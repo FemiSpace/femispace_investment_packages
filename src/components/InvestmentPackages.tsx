@@ -3,7 +3,27 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const packages = [
+type BenefitKeys = 
+  | 'Platform Access Duration'
+  | 'Post-Period Discount'
+  | 'Family Members Covered'
+  | 'Health Assessments'
+  | "Men's Health Access (Q4 2025)"
+  | "Children's Module (2026)"
+  | 'Health Protocol'
+  | 'Investment Updates'
+  | 'Future Round Priority'
+  | 'Advisory Role'
+  | 'Feature Access'
+  | 'Support Level'
+
+interface Package {
+  name: string;
+  amount: number;
+  benefits: Record<BenefitKeys, string>;
+}
+
+const packages: Package[] = [
   {
     name: 'Early Adopter',
     amount: 10000,
@@ -339,7 +359,7 @@ export function InvestmentPackages() {
   )
 }
 
-function BenefitItem({ pkg, keys }: { pkg: any, keys: string[] }) {
+function BenefitItem({ pkg, keys }: { pkg: Package, keys: BenefitKeys[] }) {
   return (
     <>
       {keys.map(key => (
