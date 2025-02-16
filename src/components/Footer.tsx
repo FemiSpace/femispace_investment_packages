@@ -26,6 +26,16 @@ export function Footer() {
             <p className="mb-4">
               Revolutionizing women's health through early detection and reversal of cardiometabolic conditions.
             </p>
+            <div className="flex space-x-4">
+              <a 
+                href="https://www.linkedin.com/in/marina-vieva/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-secondary-light"
+              >
+                LinkedIn
+              </a>
+            </div>
           </div>
         </div>
 
