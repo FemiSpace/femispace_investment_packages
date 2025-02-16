@@ -13,7 +13,7 @@ export default function Home() {
           <nav className="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-6">
             <Link href="https://femispace-pitch-vs7i.vercel.app/" className="text-white/80 hover:text-white transition-colors">Pitch Deck</Link>
             <Link href="https://femispace.com" className="text-white/80 hover:text-white transition-colors">Site</Link>
-            <Link href="/contact" className="text-white/80 hover:text-white transition-colors">Contact</Link>
+            <Link href="#contact" className="text-white/80 hover:text-white transition-colors">Contact</Link>
           </nav>
         </div>
       </div>
@@ -37,12 +37,6 @@ export default function Home() {
               className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full text-lg font-semibold transition-colors"
             >
               View Investment Packages
-            </Link>
-            <Link 
-              href="/contact" 
-              className="border-2 border-white text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-white/20 transition-colors"
-            >
-              Contact Us
             </Link>
           </div>
         </div>
