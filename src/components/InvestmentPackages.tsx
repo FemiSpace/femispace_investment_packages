@@ -121,7 +121,7 @@ const packages: Package[] = [
     benefits: {
       'Platform Access Duration': '4 years',
       'Post-Period Discount': '25%',
-      'Family Members Covered': 'Unlimited',
+      'Family Members Covered': '5',
       'Health Assessments': 'Quarterly family',
       'Men\'s Health Access (Q4 2025)': 'VIP',
       'Children\'s Module (2026)': 'VIP',
@@ -139,7 +139,7 @@ const packages: Package[] = [
     benefits: {
       'Platform Access Duration': '5 years',
       'Post-Period Discount': '25%',
-      'Family Members Covered': '8',
+      'Family Members Covered': '6',
       'Health Assessments': 'Quarterly',
       'Men\'s Health Access (Q4 2025)': 'VIP',
       'Children\'s Module (2026)': 'VIP',
