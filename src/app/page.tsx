@@ -29,7 +29,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 drop-shadow-[0_4px_4px_rgba(0,0,0,0.4)]">Invest in Your Family's Health</h1>
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 drop-shadow-[0_4px_4px_rgba(0,0,0,0.4)]">Shape the Future of Preventive Medicine</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-medium drop-shadow-[0_2px_2px_rgba(0,0,0,0.4)]">FemiSpace combines proprietary Big Data AI analytics with personalized medicine to enable affordable early detection and reversal of cardiometabolic conditions.</p>
           <div className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
             <Link 
